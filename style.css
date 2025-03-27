@@ -247,3 +247,88 @@ h1 {
     scrollbar-width: thin;
     scrollbar-color: #ff69b4 transparent;
 }
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+        line-height: 1.2;
+        padding: 0 10px;
+    }
+
+    #clock {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin: 20px 0;
+    }
+
+    #clock div {
+        width: 100%;
+        padding: 15px;
+        min-width: auto;
+    }
+
+    #clock span {
+        font-size: 2em;
+    }
+
+    .wishes-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .wish-card {
+        padding: 20px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .photo img {
+        height: 500px;
+    }
+
+    .reasons-content {
+        width: 90%;
+        padding: 20px 15px 20px 10px;
+        max-height: 85vh;
+    }
+
+    .reasons-list {
+        columns: 1;
+    }
+
+    .reasons-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .close-btn {
+        top: 10px;
+        right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .countdown h2 {
+        font-size: 1.2rem;
+        padding: 0 15px;
+    }
+
+    .photo img {
+        height: 200px;
+    }
+
+    .reasons-content {
+        padding: 15px 10px 15px 8px;
+    }
+
+    .reasons-list li {
+        font-size: 0.9rem;
+    }
+}

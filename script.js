@@ -95,4 +95,20 @@ document.addEventListener('DOMContentLoaded', function() {
             card.addEventListener('click', createReasonsModal);
         }
     });
+
+    // Оптимизация для тач-устройств
+    let isTouchDevice = 'ontouchstart' in window;
+
+    if(isTouchDevice) {
+        // Добавляем задержку для hover-эффектов
+        document.querySelectorAll('.photo, .wish-card').forEach(el => {
+            el.style.transition = 'transform 0.15s ease';
+        });
+
+        // Увеличиваем область клика для карточек
+        document.querySelectorAll('.wish-card').forEach(card => {
+            card.style.userSelect = 'none';
+            card.style.webkitTapHighlightColor = 'transparent';
+        });
+    }
 });
